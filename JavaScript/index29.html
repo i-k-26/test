@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+
+<body>
+
+    <form>
+        <select name="todofuken">
+            <option value="error">選択してください</option>
+            <option value="error">東京</option>
+            <option value="error">神奈川</option>
+            <option value="error">千葉</option>
+            <option value="error">埼玉</option>
+        </select>
+    </form>
+
+    
+    <form>
+        <select name="age">
+            <option>選択してください</option>
+            <script>
+            for(var i=18; i<= 80 ; i++){
+                document.write("<option>");
+                document.write(i);
+                document.write("</option>");
+            }
+            </script>
+        </select>
+    </form>
+    
+</body>
+</html>

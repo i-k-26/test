@@ -1,0 +1,61 @@
+header{
+    position:absolute;
+    top:0px;
+    left: 0px;
+    width:100%;
+    height: 60px;
+    background-color: black;
+}
+
+.title{
+    padding-left:10px; 
+    line-height: 60px;
+    color:white;
+}
+
+header ul{
+    float:right;
+    line-height: 40px;
+}
+
+header ul li{
+    float: left;
+    list-style: none;
+    padding-right:25px;
+    color:white;
+}
+
+main{
+    clear: both;
+}
+
+.main-contents{
+    margin: 0 auto;
+    width;95%;
+    height: 95%;
+    margin-top: 70px;
+    margin-bottom: 70px;
+}
+
+.right{
+    float: left;
+    width:70%;
+    height: 560px;
+    background-color: skyblue;
+}
+
+.left{
+    float: left;
+    width:30%;
+    height: 560px;
+    background-color: darkblue;
+}
+
+footer{
+    position: absolute;
+    bottom:0px;
+    left: 0px;
+    width:100%;
+    height: 50px;
+    background-color: black;
+}

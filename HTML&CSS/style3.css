@@ -1,0 +1,79 @@
+ul{
+    list-style-type: none;
+    color: red;
+    font-size: 30px;
+}
+
+.abc{
+    font-size: 30px;
+}
+
+.xyz{
+    color: blue;
+}
+
+#main{
+    text-align: center;
+}
+
+.sub{
+    color: red;
+    font-size: 20px;
+}
+
+.world{
+    color: blue;
+    font-family: serif;
+}
+
+h1,h2,h3{
+    color: 
+}
+
+.name1,.name2{
+    color: blue;
+    text-align: center;
+}
+
+#assist{
+    color: orange;
+}
+
+#assist h2{
+    font-size: 
+}
+
+.subtitle{
+    color: blue;
+    font-size: 10px;
+}
+
+div p{
+    color: green;
+    font-size: 20px;
+}
+
+h2{
+    font-size: 30px;
+}
+
+h2.no1{
+    color: red;
+}
+
+h2.no2{
+    color: blue;
+}
+
+.a{
+    color: red;
+    text-align: left;
+}
+
+.b{
+    font-size: 30px;
+}
+
+.a.b{
+    background-color: green;
+}

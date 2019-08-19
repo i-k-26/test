@@ -1,0 +1,154 @@
+header{
+    width:100%;
+}
+
+header ul{
+    float: left;
+    background-color: black;
+    color:white;
+    width:100%;
+    height: 40px;
+}
+
+header ul li{
+    float: left;
+    list-style: none;
+    padding-left: 25px;
+    line-height: 40px;
+}
+
+body{
+    font-family: "Hiragino Kaku Gothic ProN","メイリオ",sans-serif;
+}
+
+main{
+    clear: both;
+}
+
+main-contents{
+    width: 95%;
+    margin: 0 auto;
+    
+}
+
+.right{
+    float: left;
+    width:70%;
+    margin-bottom: 30px;
+}
+
+.right h1{
+    border-left: 7px solid black;
+    border-bottom: 2px solid black;
+    padding-left: 10px;
+    margin-bottom: 5px;
+}
+
+h3.out1{
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 15px;
+    margin-left: 15px;
+    border-left: 4px red solid;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    padding-left: 10px;
+    font-size: 20px;
+}
+
+.form{
+    background-color: #fbfbfb;
+    border: 3px #ebebeb solid;
+    width: 98%;
+    margin-bottom: 25px;
+}
+
+label{
+    margin-left: 10px;
+}
+
+.text,textarea{
+    margin-left: 10px;
+    margin-bottom: 10px;
+    border:1px solid #dfdfdf;
+    padding: 5px;
+    color: black;
+    background: #fff;
+    text-align: left;
+}
+
+.submit{
+    margin-left: 10px;
+    margin-bottom: 20px;
+    border: 1px solid lightgray;
+    padding: 4px 10px;
+    color: white;
+    background-color: #bfbfbf;
+    border-radius: 5px;
+    border-bottom: 2px solid gray;
+}
+
+.toukou{
+    background-color: #fbfbfb;
+    border: 3px #ebebeb solid;
+    width: 98%;
+    margin-bottom: 10px;
+}
+
+h3.out2{
+    width: 92%;
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 15px;
+    margin-left: 15px;
+    border-bottom: 1px gray dotted;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    padding-left: 10px;
+    font-size: 20px;
+}
+
+.contents{
+    margin-left: 25px;
+    color: black;
+    text-align: left;
+}
+
+.handlename{
+    margin-left: 1px;
+    color: black;
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+.left{
+    float: left;
+    padding-top: 40px;
+    padding-left: 15px; 
+    width:25%;
+}
+
+.left h3{
+    border-bottom:2px dotted gray;
+    padding-left: 5px;
+}
+
+.link{
+    margin-left: -30px;
+}
+
+.left ul li{
+    list-style: none;
+    white-space: nowrap;
+}
+
+footer{
+    clear: both;
+    width:100%;
+    height: 50px;
+    line-height: 50px;
+    background-color: black;
+    color:white;
+    text-align: center;
+}
+

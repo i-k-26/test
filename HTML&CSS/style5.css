@@ -1,0 +1,67 @@
+div{
+    width:50px;
+    height:50px;
+}
+
+.box1{
+    background-color:skyblue;
+    position:relative;
+    top:200px;
+    left:200px;
+}
+
+.box2{
+    background-color:red;
+}
+
+.box3{
+    background-color:green;
+}
+
+.box{
+    width:
+    height:
+    border:
+}
+
+.box._1{
+    background-color: 
+}
+
+.box._2{
+    background-color: 
+    position:
+    top:
+    left:
+}
+
+.box._3{
+    background-color: 
+    position:
+    top:
+    left:
+}
+
+p{
+    font-size:20px;
+}
+
+.bar{
+    position:
+    bottom:
+    width:
+    height:
+    background-color:
+    left:
+}
+
+#bottomline{
+    position: fixed;
+    color:white;
+    left:0px;
+    bottom: :0px;
+    width:100%;
+    height:30px;
+    background-color: gray;
+    text-align: center;
+}
