@@ -1,7 +1,7 @@
 package jp.co.internous.action;
 
 public class Android {
-	public static void main(String[]args){
+	public static void main(String[] args) {
 		SmartPhone android = new SmartPhone();
 
 		android.play();
@@ -13,6 +13,5 @@ public class Android {
 		android.photo();
 		android.internet();
 	}
-
 
 }

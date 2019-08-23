@@ -1,7 +1,7 @@
 package jp.co.internous.action;
 
 public class Test {
-	public static void main(String[]args){
+	public static void main(String[] args) {
 		Person taro = new Person();
 		taro.name = "山田太郎";
 		taro.age = 20;
@@ -40,7 +40,6 @@ public class Test {
 		System.out.println(jiro.phoneNumber);
 		System.out.println(jiro.address);
 		System.out.println("");
-
 
 		Robot aibo = new Robot();
 		aibo.name = "aibo";

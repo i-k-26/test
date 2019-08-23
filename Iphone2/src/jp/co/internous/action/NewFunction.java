@@ -10,5 +10,4 @@ public interface NewFunction {
 
 	public abstract void internet();
 
-
 }

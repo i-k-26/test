@@ -1,18 +1,18 @@
 package jp.co.internous.action;
 
 public class Human {
-	public static void main(String[]args){
+	public static void main(String[] args) {
 
-		HumanName abc=new HumanName();
+		HumanName abc = new HumanName();
 		System.out.println(abc.getName());
 
-		HumanAge efg=new HumanAge();
+		HumanAge efg = new HumanAge();
 		System.out.println(efg.getAge());
 
-		HumanAddress hij=new HumanAddress();
+		HumanAddress hij = new HumanAddress();
 		System.out.println(hij.getAddress());
 
-		HumanGender lmn=new HumanGender();
+		HumanGender lmn = new HumanGender();
 		System.out.println(lmn.getGender());
 	}
 

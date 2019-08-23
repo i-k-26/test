@@ -1,39 +1,36 @@
 package jp.co.internous.action;
 
-public class SmartPhone extends Mp3Player{
-	public void call(){
+public class SmartPhone extends Mp3Player {
+	public void call() {
 		System.out.println("電話");
 	}
 
-	public void mail(){
+	public void mail() {
 		System.out.println("メール");
 	}
 
-	public void photo(){
+	public void photo() {
 		System.out.println("写真");
 	}
 
-	public void internet(){
+	public void internet() {
 		System.out.println("インターネット");
 	}
 
-	public void play(){
+	public void play() {
 		System.out.println("再生(ハイレゾ機能)");
 	}
 
-	public void stop(){
+	public void stop() {
 		System.out.println("停止(ハイレゾ機能)");
 	}
 
-	public void next(){
+	public void next() {
 		System.out.println("次へ(ハイレゾ機能)");
 	}
 
-	public void back(){
+	public void back() {
 		System.out.println("戻る(ハイレゾ機能)");
 	}
-
-
-
 
 }
