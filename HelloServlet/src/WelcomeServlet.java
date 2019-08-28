@@ -25,7 +25,7 @@ public class WelcomeServlet extends HttpServlet {
 			System.out.println(username);
 
 			PrintWriter out = response.getWriter();
-			out.pri
+			out.println("<html><head></head><body><by>"+username+"さん、ようこそ！</body></html>");
 	}
 
 }
