@@ -16,7 +16,6 @@
 <fullyQualifiedTypeName name="java.util.List"/>
 <fullyQualifiedTypeName name="com.sun.javafx.collections.MappingChange.Map"/>
 <fullyQualifiedTypeName name="com.sun.jndi.ldap.Connection"/>
-<fullyQualifiedTypeName name="java.sql.ResultSet"/>
 <fullyQualifiedTypeName name="com.internousdev.template.dao.BuyItemDAO"/>
 <fullyQualifiedTypeName name="com.internousdev.template.dto.LoginDTO"/>
 <fullyQualifiedTypeName name="com.internousdev.template.dto.BuyItemDTO"/>
@@ -27,7 +26,10 @@
 <fullyQualifiedTypeName name="com.mysql.jdbc.Connection"/>
 <fullyQualifiedTypeName name="com.internousdev.template.util.DateUtil"/>
 <fullyQualifiedTypeName name="java.sql.Connection"/>
-<fullyQualifiedTypeName name="java.sql.SQLException"/>
 <fullyQualifiedTypeName name="com.internousdev.template.dao.BuyItemCompleteDAO"/>
+<fullyQualifiedTypeName name="java.sql.ResultSet"/>
+<fullyQualifiedTypeName name="com.internousdev.template.dto.MyPageDTO"/>
+<fullyQualifiedTypeName name="com.internousdev.template.dao.MyPageDAO"/>
 <fullyQualifiedTypeName name="java.util.Map"/>
+<fullyQualifiedTypeName name="java.sql.SQLException"/>
 </qualifiedTypeNameHistroy>
