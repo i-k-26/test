@@ -4,7 +4,10 @@ public class LoginDTO {
 	private String loginId;
 	private String loginPassword;
 	private String userName;
+	//LoginDAOから値がsetされる
+	
 	private boolean loginFlg = false;
+	//booleanはfalseかtrueの2パターンのみ
 
 	public String getLoginId() {
 		return loginId;

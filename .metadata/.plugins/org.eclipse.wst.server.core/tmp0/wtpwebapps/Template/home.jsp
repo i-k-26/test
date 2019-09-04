@@ -22,6 +22,8 @@
 
 		<div>
 			<s:form action="HomeAction">
+			<!-- 商品購入が押された場合、HomeActionに飛ぶ -->
+			
 				<s:submit value="商品購入" />
 			</s:form>
 		</div>

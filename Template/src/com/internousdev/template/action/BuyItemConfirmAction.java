@@ -12,12 +12,16 @@ public class BuyItemConfirmAction extends ActionSupport implements SessionAware 
 
 	public String execute() {
 		BuyItemCompleteDAO buyItemCompleteDAO = new BuyItemCompleteDAO();
-		buyItemCompleteDAO.buyItemInfo(session.get("id").toString(), session.get("user_master_id").toString(),
+		//インスタンス化
+		
+		buyItemCompleteDAO.buyItemInfo(session.get("id").toString(), session.get("login_user_id").toString(),
 				session.get("buyItem_price").toString(), session.get("stock").toString(),
 				session.get("pay").toString());
+		//toStringで文字列型に変換
 
 		String result = SUCCESS;
 		return result;
+		//BuyItemActionのresultがSUCCESSでreturnされるので、struts.xmlによって次ページbuyItemComplete.jspに移動する
 	}
 
 	public Map<String, Object> getSession() {

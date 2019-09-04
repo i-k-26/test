@@ -22,6 +22,7 @@ public class MyPageAction extends ActionSupport implements SessionAware {
 		if (deleteFlg == null) {
 			String item_transaction_id = session.get("id").toString();
 			String user_master_id = session.get("login_user_id").toString();
+			//String型に変換したsessionを代入
 
 			myPageDTO = myPageDAO.getMyPageUserInfo(item_transaction_id, user_master_id);
 
@@ -30,11 +31,15 @@ public class MyPageAction extends ActionSupport implements SessionAware {
 			session.put("total_count", myPageDTO.getTotalCount());
 			session.put("total_payment", myPageDTO.getPayment());
 			session.put("message", "");
+			//messageの要素は空になり、myPage.jspの分岐条件となる
+			
 			// 商品履歴を削除する場合
 		} else if (deleteFlg.equals("1")) {
 			delete();
+			//myPage.jspでvalueに1が入った場合、下記のdelete()メソッドが実行される
 		}
 		result = SUCCESS;
+		//tableのdeleteFlgがnullでも1でもない場合、SUCCESSがreturnされmyPage.jspが表示される
 		return result;
 	}
 
@@ -46,11 +51,15 @@ public class MyPageAction extends ActionSupport implements SessionAware {
 		String user_master_id = session.get("login_user_id").toString();
 
 		int res = myPageDAO.buyItemHistoryDelete(item_transaction_id, user_master_id);
+		//myPageDAOのbuyItemHistoryDeleteを、resに代入
+		//MyPageDAOのbuyItemHistoryDeleteでSQL文が実行されている場合、resには0以外の整数が入る
 
 		if (res > 0) {
 			session.put("message", "商品情報を正しく削除しました。");
+			//resに0以外の整数が入っている場合、sessionにkey:message、要素:商品情報を正しく～の文がputされる。
 		} else if (res == 0) {
 			session.put("message", "商品情報の削除に失敗しました。");
+			//いわゆるエラーが起きた場合の処理内容
 		}
 	}
 

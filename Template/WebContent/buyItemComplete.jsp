@@ -25,6 +25,7 @@
 
 			<div>
 				<a href='<s:url action="MyPageAction"/>'>マイページ</a><span>から購入履歴の確認が可能です。</span>
+				<!-- クリックされるとMypageActionに移動し、struts.xmlの指示によってmyPage.jspに移動する -->
 			</div>
 
 		</div>

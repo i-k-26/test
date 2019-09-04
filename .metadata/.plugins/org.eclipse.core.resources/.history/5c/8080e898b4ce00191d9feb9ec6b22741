@@ -1,0 +1,12 @@
+package com.internousdev.template.action;
+
+import com.opensymphony.xwork2.ActionSupport;
+
+public class HomeAction extends ActionSupport {
+	
+	//executeメソッドを呼び出す
+	public String execute() {
+		return SUCCESS;
+	}
+}
+//struts.xmlの指示によって、login.jspへ移動する

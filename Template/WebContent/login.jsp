@@ -27,6 +27,7 @@
 				<s:password name="loginPassword" />
 				<s:submit value="ログイン" />
 			</s:form>
+			<!-- 入力された情報はLoginActionに送られる -->
 
 			<br />
 

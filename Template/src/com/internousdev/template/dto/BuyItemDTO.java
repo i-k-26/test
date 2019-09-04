@@ -4,6 +4,9 @@ public class BuyItemDTO {
 	private int id;
 	private String itemName;
 	private String itemPrice;
+	//LoginActionによってitem_info_transactionのtableが呼び出され、値がsetされる。
+	
+	//BuyItemDAOによってそれぞれの値がsetし直される
 
 	public String getItemName() {
 		return itemName;

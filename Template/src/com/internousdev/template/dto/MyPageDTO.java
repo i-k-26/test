@@ -6,6 +6,8 @@ public class MyPageDTO {
 	private String totalPrice;
 	private String totalCount;
 	private String payment;
+	
+	//MyPageDAOから各変数にsetされる
 
 	public String getItemName() {
 		return this.itemName;

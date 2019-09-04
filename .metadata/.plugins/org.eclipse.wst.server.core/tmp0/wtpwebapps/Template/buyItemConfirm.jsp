@@ -26,22 +26,27 @@
 					<tr>
 						<td>商品名</td>
 						<td><s:property value="session.buyItem_name" /></td>
+						<!-- LoginActionでMapインターフェースによってsessionされた要素を取り出す   -->
 					</tr>
 					<tr>
 						<td>値段</td>
 						<td><s:property value="session.buyItem_price" /><span>円</span>
+						<!-- BuyItemActionでsessionされたbuyItem_priceというkeyの中身、intStock*intPriceを取り出す -->
 						</td>
 					</tr>
 					<tr>
 						<td>購入個数</td>
 						<td><s:property value="session.stock" /><span>個</span></td>
+						<!-- BuyItemActionで文字列型へと変換されているsession、keyがstockのstock要素を取り出す -->
 					</tr>
 					<tr>
 						<td><span>支払い方法</span></td>
 						<td><s:property value="session.pay" /></td>
+						<!-- BuyItemActionのif文でsessionされた、keyがpayの文字列型のpayment要素を取り出す -->
 					</tr>
 					<tr>
 						<td><s:submit value="完了" /></td>
+						<!-- valueによってBuyItemConfirmActionへ情報が送られる -->
 					</tr>
 				</table>
 			</s:form>

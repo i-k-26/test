@@ -24,6 +24,7 @@ public class DBConnector {
 
 	public Connection getConnection() {
 		Connection con = null;
+		//初期値はnullなので、tryが回らないとMysqlにログインできない
 
 		try {
 			Class.forName(driverName);
@@ -34,6 +35,7 @@ public class DBConnector {
 			e.printStackTrace();
 		}
 		return con;
+		//エラーが無ければconにログイン状態が保存され、returnによってgetConnectionメソッドに送られる。
 	}
 
 }
