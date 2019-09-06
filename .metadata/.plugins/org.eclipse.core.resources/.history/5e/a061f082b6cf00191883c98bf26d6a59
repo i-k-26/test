@@ -1,0 +1,77 @@
+package com.internousdev.ecsite.action;
+
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.Map;
+
+import org.apache.struts2.interceptor.SessionAware;
+
+import com.opensymphony.xwork2.ActionSupport;
+
+public class MyPageAction extends ActionSupport implements SessionAware {
+
+	private Map<String, Object> session;
+	private MyPageDAO myPageDAO = new MyPageDAO();
+	private ArrayList<MyPageDTO> myPageList = new ArrayList<MyPageDTO>();
+	private String deleteFlg;
+	private String message;
+
+	public String execute() throws SQLException {
+		if (!session.containsKey("login_user_id")) {
+			return ERROR;
+		}
+
+		// 商品履歴を削除しない場合
+		if (deleteFlg == null) {
+			String item_transaction_id = session.get("id").toString();
+			String user_master_id = session.get("login_user_id").toString();
+			// String型に変換したsessionを代入
+
+			myPageList = myPageDAO.getMyPageUserInfo(item_transaction_id, user_master_id);
+
+			// 商品履歴を削除する場合
+		} else if (deleteFlg.equals("1")) {
+			delete();
+			// myPage.jspでvalueに1が入った場合、下記のdelete()メソッドが実行される
+		}
+		result = SUCCESS;
+		// tableのdeleteFlgがnullでも1でもない場合、SUCCESSがreturnされmyPage.jspが表示される
+		return result;
+	}
+
+	public void delete() throws SQLException {
+
+		String item_transaction_id = session.get("id").toString();
+		String user_master_id = session.get("login_user_id").toString();
+
+		int res = myPageDAO.buyItemHistoryDelete(item_transaction_id, user_master_id);
+		// myPageDAOのbuyItemHistoryDeleteを、resに代入
+		// MyPageDAOのbuyItemHistoryDeleteでSQL文が実行されている場合、resには0以外の整数が入る
+
+		if (res > 0) {
+			myPageList = null;
+			setMessage("商品情報を正しく削除しました。");
+			// resに0以外の整数が入っている場合、sessionにkey:message、要素:商品情報を正しく～の文がputされる。
+		} else if (res == 0) {
+			setMessage("商品情報の削除に失敗しました。");
+			// いわゆるエラーが起きた場合の処理内容
+		}
+	}
+
+	public void setDeleteFlg(String deleteFlg) {
+		this.deleteFlg = deleteFlg;
+	}
+
+	public ArrayList<MyPageDTO> getMyPageList() {
+		return this.myPageList;
+	}
+
+	public String getMessage() {
+		return message;
+	}
+
+	public void setMessage(String message) {
+		this.message = message;
+	}
+
+}
