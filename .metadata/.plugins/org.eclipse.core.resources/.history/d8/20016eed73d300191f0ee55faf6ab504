@@ -1,0 +1,10 @@
+
+public class ListPractice {
+
+	public static void main(String[] args) {
+
+		Person sato = new Person("sato", 28);
+
+	}
+
+}

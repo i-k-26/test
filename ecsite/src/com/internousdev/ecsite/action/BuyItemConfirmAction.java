@@ -14,8 +14,8 @@ public class BuyItemConfirmAction extends ActionSupport implements SessionAware 
 	// インスタンス化
 
 	public String execute() throws SQLException {
-		buyItemCompleteDAO.buyItemInfo(session.get("id").toString(), session.get("count").toString(),
-				session.get("total_price").toString(), session.get("login_user_id").toString(),
+		buyItemCompleteDAO.buyItemInfo(session.get("id").toString(), session.get("total_price").toString(),
+				session.get("count").toString(), session.get("login_user_id").toString(),
 				session.get("pay").toString());
 		// toStringで文字列型に変換
 

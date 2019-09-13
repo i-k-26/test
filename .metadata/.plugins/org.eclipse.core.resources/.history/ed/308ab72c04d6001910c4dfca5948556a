@@ -1,0 +1,9 @@
+package com.internousdev.login3.action;
+
+public class LoginAction {
+
+	public LoginAction() {
+		// TODO 自動生成されたコンストラクター・スタブ
+	}
+
+}

@@ -1,0 +1,28 @@
+import java.util.HashMap;
+import java.util.Map;
+
+public class MapPractice {
+
+	public static void main(String[] args) {
+		
+		Person sato = new Person("sato", 28);
+		Person monzen = new Person("monzen", 22);
+		Person suzuki = new Person("suzuki", 31);
+		
+		Map<String,Person> personMap = new HashMap<String,Person>();
+		
+		personMap.put("sato",sato);
+		personMap.put("monzen",monzen);
+		personMap.put("suzuki",suzuki);
+		
+		if(personMap.containsKey("monzen")){
+			System.out.println("門前さんはいます");
+		}else{
+			System.out.println("門前さんはいません");
+		}
+		
+		for (personMap.entrySet())
+		
+	}
+
+}

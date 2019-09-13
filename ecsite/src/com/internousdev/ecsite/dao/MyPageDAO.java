@@ -24,7 +24,7 @@ public class MyPageDAO {
 				+ "ubit.item_transaction_id =? AND ubit.user_master_id=? " + "ORDER BY insert_date DESC";
 		// SQLを動かすためのSELECT文
 		// iit=item_info_transactionの頭文字を取った略称
-		// ubit=user_buy_item_uransactionの頭文字を取った略称
+		// ubit=user_buy_item_transactionの頭文字を取った略称
 		// 複数のtableのフィールドをSELECTしている
 		// iitで指定したidフィールドと、ubitで指定したitem_transaction_idフィールドをLEFT
 		// JOIN(テーブル結合)している

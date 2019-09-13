@@ -1,0 +1,22 @@
+package com.internousdev.login3.dao;
+
+import java.sql.PreparedStatement;
+
+import com.internousdev.login3.util.DBConnector;
+
+public class LoginDAO {
+	
+	DBConnector db =new DBconnector();
+	con = db.getConnection();
+	
+	String sql ="select * from user where login_id = ? AND login_pass";
+	
+	try{
+		PreparedStatement ps = prepareStatement (sql);
+		
+
+	}
+	
+	
+
+}

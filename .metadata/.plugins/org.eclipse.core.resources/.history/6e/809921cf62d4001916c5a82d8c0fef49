@@ -1,0 +1,8 @@
+package com.internousdev.ecsite2.action;
+
+public class Snippet {
+	public static void main(String[] args) {
+		com.internousdev.ecsite2.action
+	}
+}
+

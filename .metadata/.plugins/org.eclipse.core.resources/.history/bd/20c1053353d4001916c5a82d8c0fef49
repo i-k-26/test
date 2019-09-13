@@ -1,0 +1,9 @@
+package com.internousdev.login2.dao;
+
+public class LoginDAO {
+
+	public LoginDAO() {
+		// TODO 自動生成されたコンストラクター・スタブ
+	}
+
+}

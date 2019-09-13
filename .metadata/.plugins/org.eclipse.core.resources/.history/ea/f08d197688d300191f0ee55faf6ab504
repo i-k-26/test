@@ -1,0 +1,23 @@
+import java.util.ArrayList;
+import java.util.List;
+
+public class ListPractice {
+
+	public static void main(String[] args) {
+
+		Person sato = new Person("sato",28);
+		System.out.println(sato);
+		Person monzen = new Person("monzen", 22);
+		System.out.println(monzen);
+		Person suzuki = new Person("suzuki", 31);
+		System.out.println(suzuki);
+		List<String> personList = new ArrayList<String>();
+		
+		
+		
+		System.out.println(personList);
+		
+	
+	}
+
+}
