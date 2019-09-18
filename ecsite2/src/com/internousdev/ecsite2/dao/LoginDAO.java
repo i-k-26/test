@@ -35,11 +35,16 @@ public class LoginDAO {
 				loginDTO.setLoginId(rs.getString("login_id"));
 				loginDTO.setLoginPassword(rs.getString("login_pass"));
 				loginDTO.setUserName(rs.getString("user_name"));
+				loginDTO.setInsertDate(rs.getString("insert_date"));
 				// ResultSetに代入された検索結果を元に、next()メソッドで上から順に値をgetしloginDTOのメソッドへ順にsetする//
 
 				if (rs.getString("login_id") != null) {
 					loginDTO.setLoginFlg(true);
 					// Resultsetからgetしたlogin_idがnullじゃないならば、loginDTOのsetLoginFlgメソッドをtrueにする
+
+					if (rs.getString("insert_date") == null) {
+						loginDTO.setAdminFlg(true);
+					}
 				}
 			}
 

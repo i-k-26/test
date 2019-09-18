@@ -18,10 +18,10 @@ public class MyPageDAO {
 		ArrayList<MyPageDTO> myPageDTO = new ArrayList<MyPageDTO>();
 		// ArrayList<MyPageDTO>をインスタンス化してMyPageDAOクラスで使用できるようにする
 
-		String sql = "SELECT " + "ubit.id," + "iit.item_name," + "ubit.total_price," + "ubit.total_count," + "ubit.pay,"
-				+ "ubit.insert_date " + "FROM " + "user_buy_item_transaction ubit " + "LEFT JOIN "
-				+ "item_info_transaction iit " + "ON " + "ubit.item_transaction_id=iit.id " + "WHERE "
-				+ "ubit.item_transaction_id =? AND ubit.user_master_id=? " + "ORDER BY insert_date DESC";
+		String sql = "SELECT ubit.id,iit.item_name,ubit.total_price,ubit.total_count,ubit.pay,ubit.insert_date "
+				+ "FROM user_buy_item_transaction ubit " + "LEFT JOIN item_info_transaction iit "
+				+ "ON ubit.item_transaction_id=iit.id " + "WHERE ubit.item_transaction_id =? AND ubit.user_master_id=? "
+				+ "ORDER BY insert_date DESC";
 		// SQLを動かすためのSELECT文
 		// iit=item_info_transactionの頭文字を取った略称
 		// ubit=user_buy_item_uransactionの頭文字を取った略称

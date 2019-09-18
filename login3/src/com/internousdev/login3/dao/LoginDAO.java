@@ -16,7 +16,7 @@ public class LoginDAO {
 		Connection con = (Connection) db.getConnection();
 		LoginDTO dto = new LoginDTO();
 
-		String sql = "select * from user where login_id = ? AND login_pass";
+		String sql = "select * from user where login_id = ? AND login_pass = ?";
 
 		try {
 			PreparedStatement ps = con.prepareStatement(sql);
@@ -34,6 +34,7 @@ public class LoginDAO {
 					dto.setLoginFlg(true);
 				}
 			}
+
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}

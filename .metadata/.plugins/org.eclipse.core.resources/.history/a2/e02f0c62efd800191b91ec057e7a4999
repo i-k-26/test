@@ -1,0 +1,46 @@
+package com.internousdev.login3.dao;
+
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+import com.internousdev.login3.dto.LoginDTO;
+import com.internousdev.login3.util.DBConnector;
+import com.mysql.jdbc.Connection;
+
+public class LoginDAO {
+
+	public LoginDTO getLoginUserInfo(String loginId, String loginPassword) {
+
+		DBConnector db = new DBConnector();
+		Connection con = (Connection) db.getConnection();
+		LoginDTO dto = new LoginDTO();
+
+		String sql = "select * from user where login_id = ? AND login_pass";
+
+		try {
+			PreparedStatement ps = con.prepareStatement(sql);
+
+			ps.setString(1, loginId);
+			ps.setString(2, loginPassword);
+
+			ResultSet rs = ps.executeQuery();
+
+			if (rs.next()) {
+				dto.setLogin_id(rs.getString("login_id"));
+				dto.setLogin_pass(rs.getString("login_pass"));
+
+				if (rs.getString("login_id") != null) {
+					dto.setLoginFlg(true);
+				}
+			}
+			
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+
+		return dto;
+
+	}
+
+}

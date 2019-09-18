@@ -4,7 +4,9 @@ public class LoginDTO {
 	private String loginId;
 	private String loginPassword;
 	private String userName;
+	private String insertDate;
 	private boolean loginFlg = false;
+	private boolean adminFlg = false;
 	// booleanはfalseかtrueの2パターンのみ
 
 	public String getLoginId() {
@@ -31,6 +33,22 @@ public class LoginDTO {
 
 	public void setUserName(String userName) {
 		this.userName = userName;
+	}
+
+	public String getInsertDate() {
+		return insertDate;
+	}
+
+	public void setInsertDate(String insertDate) {
+		this.insertDate = insertDate;
+	}
+
+	public boolean getAdminFlg() {
+		return adminFlg;
+	}
+
+	public void setAdminFlg(boolean adminFlg) {
+		this.adminFlg = adminFlg;
 	}
 
 	public boolean getLoginFlg() {

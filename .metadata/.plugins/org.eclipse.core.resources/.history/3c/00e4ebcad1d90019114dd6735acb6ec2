@@ -1,0 +1,50 @@
+package com.internousdev.ecsite2.dao;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.ArrayList;
+
+import com.internousdev.ecsite2.dto.ItemListDTO;
+import com.internousdev.ecsite2.util.DBConnector;
+
+public class ItemListDAO {
+
+	public ArrayList<ItemListDTO> getItemListInfo(String item_info_transaction) throws SQLException {
+
+		DBConnector db = new DBConnector();
+		Connection con = db.getConnection();
+		ArrayList<ItemListDTO> itemlistDTO = new ArrayList<ItemListDTO>();
+
+		String sql = "select * from item_info_transaction";
+
+		try {
+			PreparedStatement ps = con.prepareStatement(sql);
+
+			ps.setString(1, item_info_transaction);
+
+			ResultSet rs = ps.executeQuery();
+
+			while (rs.next()) {
+				ItemListDTO dto = new ItemListDTO();
+
+				dto.setId(rs.getInt("id"));
+				dto.setItemName(rs.getString("item_name"));
+				dto.setItemPrace(rs.getInt("item_prace"));
+				dto.setItemCount(rs.getInt("item_count"));
+				dto.setInsertDate(rs.getString("insert_date"));
+				dto.setUpdatedDate(rs.getString("updated_date"));
+
+				itemlistDTO.add(dto);
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			con.close();
+		}
+		return itemlistDTO;
+
+	}
+
+}

@@ -28,15 +28,11 @@ public class LoginAction extends ActionSupport implements SessionAware {
 		loginDTO = loginDAO.getLoginUserInfo(loginUserId, loginPassword);
 		// loginDAOのgetLoginUserInfoメソッドを呼び出し、loginUserIdとloginPasswordをloginDTOに代入(loginDAOの処理へ)
 
-		session.put("loginUser", loginDTO);
-		// MapインターフェースでkeyをloginUser、要素をloginDTOという内容でsession.putする
-
-		if (((LoginDTO) session.get("loginUser")).getLoginFlg()) {
+		if (loginDTO.getLoginFlg()) {
 			// session.getでkey=loginUserの要素であるloginDTOをgetし、変数loginDTOをプロジェクト型のLoginDTOに戻す処理を行う
 			// LoginDTOクラスにsetされているLoginFlg()メソッドの中身をgetする
 			// if文は()内がtrueの場合のみ、その先の処理を行う
 
-			result = SUCCESS;
 			BuyItemDTO buyItemDTO = buyItemDAO.getBuyItemInfo();
 			// tableに登録されている全ての商品情報をbuyItemDTOに代入している
 
@@ -48,6 +44,14 @@ public class LoginAction extends ActionSupport implements SessionAware {
 			// sessionを使用する理由は、ログインを通さずに直接このページに飛んできたときに商品情報を表示させないため
 			// session.putされた情報をbuyItem.jspに表示させる
 
+			result = SUCCESS;
+
+			if (loginDTO.getAdminFlg()) {
+				session.put("adminname", loginDTO.getUserName());
+
+				result = LOGIN;
+				return result;
+			}
 			return result;
 			// resultにはSUCCESSが代入されているため、SUCCESSがreturnされる
 			// LoginActionがSUCCESSの場合、struts.xmlの指示によって次のページbuyItem.jspへと飛ばされる

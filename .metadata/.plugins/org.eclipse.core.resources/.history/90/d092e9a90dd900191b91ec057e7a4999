@@ -1,0 +1,26 @@
+package com.internousdev.multipledisplay.action;
+
+import java.util.ArrayList;
+
+import com.internousdev.multipledisplay.util.Person;
+
+public class multipleDisplayAction {
+
+	public String execute() {
+
+		String result = ERROR;
+
+		Person sato = new Person("sato", 28);
+		Person monzen = new Person("monzen", 22);
+		Person suzuki = new Person("suzuki", 31);
+
+		ArrayList<Person> personList = new ArrayList<Person>();
+
+		personList.add(sato);
+		personList.add(monzen);
+		personList.add(suzuki);
+
+		return SUCCESS;
+	}
+
+}

@@ -1,0 +1,23 @@
+package com.internousdev.ecsite2.action;
+
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.Map;
+
+import com.internousdev.ecsite2.dao.ItemListDAO;
+import com.internousdev.ecsite2.dto.ItemListDTO;
+import com.opensymphony.xwork2.ActionSupport;
+
+public class ItemListAction extends ActionSupport {
+
+	public String execute() throws SQLException {
+
+		private Map<String, Object> session;
+		private ItemListDAO itemlistDAO = new ItemListDAO();
+		private ArrayList<ItemListDTO> itemlist = new ArrayList<ItemListDTO>();
+
+		itemlist = itemlistDAO.getItemListInfo();
+
+	}
+
+}
